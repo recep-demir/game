@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #FF3CAC;
+    background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+    width: 100vw;
+    height: 100vh;
+    padding: 10px;
+}
+
+.big-image{
+    background-image: url(./images/Img_1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 700px;
+    width: 80%;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.ground{
+    background-image: url(./images/Img_02.png);
+    position: absolute;
+    bottom:0;
+    left:0 ;
+    height: 150px;
+    width: 100000%;
+    animation-name: ground;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.car{
+    position: absolute;
+    bottom: 52px;
+    left: 33%;
+    z-index: 2;
+    animation: car 0.5s infinite alternate ease-in-out;
+}
+
+
+
+@keyframes car {
+    0%{
+        transform: translateY(5px);
+    }
+50%{
+            transform: translateY(0);
+    }
+    100%{
+            transform: translateY(-2px);
+    }
+}
+
+@keyframes ground{
+    100%{
+        transform: translateX(-2000px);
+    }
+
+
+} 
